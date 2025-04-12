@@ -1,0 +1,399 @@
+/* Base styles */
+@font-face {
+  font-family: 'D-DIN';
+  src: url('https://www.spacex.com/static/fonts/D-DIN-Bold.woff2') format('woff2'),
+       url('https://www.spacex.com/static/fonts/D-DIN-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'D-DIN';
+  src: url('https://www.spacex.com/static/fonts/D-DIN.woff2') format('woff2'),
+       url('https://www.spacex.com/static/fonts/D-DIN.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'D-DIN', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: white;
+  background-color: black;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+/* Header styles */
+header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.logo {
+  width: 210px;
+  height: auto;
+  margin-right: 10px; /* Reduced margin to match original */
+}
+
+/* Main navigation */
+.main-nav {
+  margin-left: 10px; /* Added small margin to match original spacing */
+}
+
+.main-nav .nav-link {
+  color: white !important;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 12px; /* Adjusted padding to match original */
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  font-family: 'D-DIN', sans-serif;
+  letter-spacing: 0.5px; /* Added letter spacing */
+}
+
+.main-nav .nav-link:hover {
+  color: #aaa !important;
+  opacity: 0.8;
+}
+
+/* Shop link */
+.shop-link {
+  color: white !important;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  text-decoration: none;
+  font-family: 'D-DIN', sans-serif;
+  letter-spacing: 0.5px;
+  margin-right: 25px; /* Added space between SHOP and menu icon */
+}
+
+.shop-link:hover {
+  color: #aaa !important;
+  opacity: 0.8;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.menu-icon {
+  width: 18px;
+  height: 13px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-icon div {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Side menu styles */
+.offcanvas {
+  background-color: black;
+  width: 320px; /* Adjusted to match original */
+}
+
+.offcanvas-header {
+  padding: 20px;
+}
+
+.btn-close {
+  background-color: transparent;
+  opacity: 1;
+  filter: invert(1) brightness(100%);
+}
+
+.side-menu-heading {
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'D-DIN', sans-serif;
+}
+
+.side-nav .nav-link, 
+.side-nav-mobile .nav-link {
+  color: #979797 !important; /* Exact color from SpaceX site */
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.2s ease;
+  font-family: 'D-DIN', sans-serif;
+  font-weight: 400;
+}
+
+.side-nav .nav-link:hover, 
+.side-nav-mobile .nav-link:hover {
+  color: white !important;
+}
+
+.side-nav-mobile .nav-link {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* Main content styles */
+.main-container {
+  width: 100%;
+}
+
+.image-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 140px; /* Adjusted to match original */
+  left: 7%; /* Exact left margin from SpaceX site */
+  max-width: 520px;
+}
+
+.image-text h1 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: 'D-DIN', sans-serif;
+}
+
+.image-text p {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 25px;
+  margin-top: 0;
+  letter-spacing: -0.5px;
+  font-family: 'D-DIN', sans-serif;
+}
+
+.mission-button {
+  padding: 16px 40px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 0;
+  background-color: transparent;
+  letter-spacing: 1.5px;
+  transition: background-color 0.3s ease;
+  margin-left: 0;
+  font-family: 'D-DIN', sans-serif;
+}
+
+.mission-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid white;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-7px) translateX(-50%);
+  }
+}
+
+/* Footer styles */
+footer {
+  padding: 30px 0;
+}
+
+footer p {
+  margin-bottom: 0;
+  font-size: 11px;
+  color: #979797;
+  font-family: 'D-DIN', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .image-text p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo {
+    width: 160px;
+  }
+  
+  .image-text {
+    left: 5%;
+  }
+  
+  .image-text p {
+    font-size: 36px;
+  }
+  
+  .mission-button {
+    padding: 14px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 140px;
+  }
+  
+  .image-text {
+    bottom: 100px;
+    left: 5%;
+  }
+  
+  .image-text h1 {
+    font-size: 13px;
+  }
+  
+  .image-text p {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .mission-button {
+    padding: 12px 25px;
+    font-size: 12px;
+  }
+  
+  .image-section {
+    height: 90vh;
+  }
+  
+  .offcanvas {
+    width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 15px 10px;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-left: 5px;
+  }
+  
+  .menu-toggle {
+    margin-right: 5px;
+  }
+  
+  .image-text {
+    bottom: 80px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .image-text h1 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .image-text p {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .mission-button {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+  
+  .image-section {
+    height: 80vh;
+  }
+  
+  .offcanvas {
+    width: 85%;
+  }
+}
+@media (max-width: 960px) {
+  .logo {
+    width: 120px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it takes full width */
+  }
+
+  .navbar-brand {
+    margin: 0 auto !important; /* Override default margins */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar .main-nav,
+  .navbar .shop-link {
+    display: none !important; /* Optional: hide nav items for clarity */
+  }
+}
